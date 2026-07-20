@@ -1,0 +1,22 @@
+{
+  "name": "evergreen-adventure",
+  "version": "1.0.0",
+  "description": "A premium open-world cartoon life adventure game for web browsers",
+  "author": "Your Name",
+  "license": "MIT",
+  "keywords": [
+    "game",
+    "adventure",
+    "simulation",
+    "life-sim",
+    "web-game",
+    "mobile",
+    "open-world",
+    "indie-game"
+  ],
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "dev": "npx live-server",
+    "build": "echo 'No build required for this game'"
+  }
+}
