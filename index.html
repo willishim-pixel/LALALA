@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#2d5016">
+    <title>Evergreen Adventure</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/ui.css">
+    <link rel="stylesheet" href="styles/world.css">
+</head>
+<body>
+    <div id="game-container">
+        <!-- Game Canvas -->
+        <canvas id="gameCanvas"></canvas>
+        
+        <!-- UI Layer -->
+        <div id="ui-layer" class="ui-layer">
+            <!-- Smartphone -->
+            <div id="smartphone" class="smartphone hidden">
+                <div class="phone-screen">
+                    <div id="phone-content" class="phone-content"></div>
+                </div>
+            </div>
+            
+            <!-- HUD -->
+            <div id="hud" class="hud">
+                <div class="hud-top">
+                    <div class="hud-time">
+                        <span id="game-time">6:00 AM</span>
+                    </div>
+                    <div class="hud-weather">
+                        <span id="weather-icon">☀️</span>
+                        <span id="weather-temp">72°F</span>
+                    </div>
+                </div>
+                
+                <div class="hud-bottom">
+                    <div class="hud-stats">
+                        <div class="stat-bar">
+                            <label>Energy</label>
+                            <div class="bar" id="energy-bar">
+                                <div class="fill"></div>
+                            </div>
+                        </div>
+                        <div class="stat-bar">
+                            <label>Mood</label>
+                            <div class="bar" id="mood-bar">
+                                <div class="fill"></div>
+                            </div>
+                        </div>
+                        <div class="stat-bar">
+                            <label>Hunger</label>
+                            <div class="bar" id="hunger-bar">
+                                <div class="fill"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="hud-money">
+                        <span class="money-icon">💰</span>
+                        <span id="player-money">$0</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Smartphone Button -->
+            <button id="smartphone-btn" class="smartphone-btn" title="Open Smartphone">📱</button>
+            
+            <!-- Context Menu -->
+            <div id="context-menu" class="context-menu hidden"></div>
+            
+            <!-- Dialogue Box -->
+            <div id="dialogue-box" class="dialogue-box hidden">
+                <div class="dialogue-character">
+                    <div id="character-portrait" class="character-portrait"></div>
+                    <div id="character-name" class="character-name"></div>
+                </div>
+                <div id="dialogue-text" class="dialogue-text"></div>
+                <div class="dialogue-choices" id="dialogue-choices"></div>
+            </div>
+            
+            <!-- Notifications -->
+            <div id="notifications" class="notifications"></div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/utils/math.js"></script>
+    <script src="js/utils/storage.js"></script>
+    <script src="js/utils/events.js"></script>
+    
+    <script src="js/config/world.js"></script>
+    <script src="js/config/careers.js"></script>
+    <script src="js/config/npcs.js"></script>
+    <script src="js/config/items.js"></script>
+    
+    <script src="js/systems/time.js"></script>
+    <script src="js/systems/weather.js"></script>
+    <script src="js/systems/player.js"></script>
+    <script src="js/systems/world.js"></script>
+    <script src="js/systems/npc.js"></script>
+    <script src="js/systems/career.js"></script>
+    <script src="js/systems/housing.js"></script>
+    <script src="js/systems/vehicle.js"></script>
+    <script src="js/systems/inventory.js"></script>
+    <script src="js/systems/dialogue.js"></script>
+    <script src="js/systems/camera.js"></script>
+    
+    <script src="js/ui/hud.js"></script>
+    <script src="js/ui/smartphone.js"></script>
+    <script src="js/ui/notifications.js"></script>
+    <script src="js/ui/dialogue.js"></script>
+    
+    <script src="js/rendering/canvas.js"></script>
+    <script src="js/rendering/sprites.js"></script>
+    <script src="js/rendering/animations.js"></script>
+    <script src="js/rendering/particles.js"></script>
+    
+    <script src="js/game.js"></script>
+</body>
+</html>
